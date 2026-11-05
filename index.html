@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora la Biblia: libros, versículos destacados, búsqueda de referencias y recursos para estudiar la Palabra de Dios.">
+  <meta name="theme-color" content="#173b32">
+  <title>La Biblia | Un espacio para la Palabra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="#inicio" aria-label="La Biblia, ir al inicio">✦ LA BIBLIA</a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#explora">Explora</a></li>
+          <li><a href="#versiculo">Versículo</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero" id="inicio">
+      <div>
+        <span class="eyebrow">Lee · Aprende · Reflexiona</span>
+        <h1>Una palabra que ilumina el camino.</h1>
+        <p>Un espacio sencillo para acercarte a la Biblia, descubrir sus libros y encontrar inspiración para tu día.</p>
+        <a class="button" href="#explora">Comenzar a explorar ↓</a>
+        <a class="button secondary" href="#versiculo">Leer un versículo</a>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 280 220" role="img" aria-labelledby="bookTitle bookDesc" xmlns="http://www.w3.org/2000/svg">
+          <title id="bookTitle">Ilustración de una Biblia abierta</title>
+          <desc id="bookDesc">Un libro abierto de páginas color crema con líneas doradas, sobre un fondo verde oscuro.</desc>
+          <path d="M25 64 Q82 45 137 75 L137 188 Q82 158 25 177 Z" fill="#f8f0d8" stroke="#d8ad57" stroke-width="3"/>
+          <path d="M255 64 Q198 45 143 75 L143 188 Q198 158 255 177 Z" fill="#fff8e8" stroke="#d8ad57" stroke-width="3"/>
+          <path d="M140 75 L140 190" stroke="#b98d3e" stroke-width="4"/>
+          <g stroke="#c8b990" stroke-width="2" stroke-linecap="round">
+            <path d="M43 88 Q84 77 119 91 M43 103 Q84 92 119 106 M43 118 Q84 107 119 121 M43 133 Q84 122 119 136 M43 148 Q84 137 119 151"/>
+            <path d="M161 91 Q196 77 237 88 M161 106 Q196 92 237 103 M161 121 Q196 107 237 118 M161 136 Q196 122 237 133 M161 151 Q196 137 237 148"/>
+          </g>
+          <path d="M140 27 L146 42 L162 43 L150 53 L154 68 L140 59 L126 68 L130 53 L118 43 L134 42 Z" fill="#d8ad57"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="explora" aria-labelledby="explora-titulo">
+      <div class="section-heading">
+        <h2 id="explora-titulo">Explora la Biblia</h2>
+        <p>La Biblia reúne diferentes libros que transmiten relatos, enseñanzas, poesía, profecías y cartas.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🌿</div>
+          <h3>Antiguo Testamento</h3>
+          <p>Presenta la creación, la historia del pueblo de Israel, la sabiduría y los mensajes de los profetas.</p>
+          <a href="https://www.biblegateway.com/versions/Reina-Valera-1960-RVR1960-Biblia/" target="_blank" rel="noopener noreferrer">Consultar una Biblia en línea ↗</a>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">✝️</div>
+          <h3>Nuevo Testamento</h3>
+          <p>Incluye la vida y enseñanzas de Jesús, el comienzo de la iglesia y cartas para las primeras comunidades cristianas.</p>
+          <a href="https://www.biblegateway.com/versions/Reina-Valera-1960-RVR1960-Biblia/" target="_blank" rel="noopener noreferrer">Leer en línea ↗</a>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📖</div>
+          <h3>Cómo leerla</h3>
+          <p>Lee un pasaje con calma, observa su contexto, piensa en su mensaje y anota las preguntas que te surjan.</p>
+          <a href="#herramientas">Usar herramientas de lectura ↓</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="versiculo" aria-labelledby="versiculo-titulo">
+      <div class="section-heading">
+        <h2 id="versiculo-titulo">Versículo destacado</h2>
+        <p>Una breve lectura para reflexionar y compartir.</p>
+      </div>
+      <div class="verse">
+        <blockquote>“Lámpara es a mis pies tu palabra, y lumbrera a mi camino.”</blockquote>
+        <cite>Salmos 119:105 · Reina-Valera 1960</cite>
+        <button class="button" id="copiar-versiculo" type="button">Copiar versículo</button>
+        <p class="small" id="estado-copia" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="herramientas" aria-labelledby="herramientas-titulo">
+      <div class="section-heading">
+        <h2 id="herramientas-titulo">Herramientas interactivas</h2>
+        <p>Busca una referencia o elige un libro para ver una sugerencia de lectura.</p>
+      </div>
+      <div class="tools">
+        <article class="card">
+          <h3>Buscar una referencia</h3>
+          <form id="form-busqueda">
+            <label for="referencia">Libro, capítulo y versículo</label>
+            <input id="referencia" name="referencia" type="search" placeholder="Ej.: Salmos 23:1" autocomplete="off" aria-describedby="ayuda-referencia" required>
+            <p class="small muted" id="ayuda-referencia">Escribe una referencia bíblica para abrir una búsqueda en BibleGateway.</p>
+            <div class="form-row"><button class="button" type="submit">Buscar referencia ↗</button></div>
+          </form>
+          <p class="result" id="resultado-busqueda" role="status" aria-live="polite">Tu búsqueda aparecerá aquí.</p>
+        </article>
+        <article class="card">
+          <h3>Elige un libro</h3>
+          <p>Selecciona un libro para obtener una sugerencia de lectura.</p>
+          <div class="book-list" aria-label="Libros bíblicos sugeridos">
+            <button class="book-chip" type="button" data-book="Génesis" aria-pressed="false">Génesis</button>
+            <button class="book-chip" type="button" data-book="Salmos" aria-pressed="false">Salmos</button>
+            <button class="book-chip" type="button" data-book="Proverbios" aria-pressed="false">Proverbios</button>
+            <button class="book-chip" type="button" data-book="Mateo" aria-pressed="false">Mateo</button>
+            <button class="book-chip" type="button" data-book="Juan" aria-pressed="false">Juan</button>
+            <button class="book-chip" type="button" data-book="Romanos" aria-pressed="false">Romanos</button>
+          </div>
+          <div class="reading-panel" id="panel-lectura" aria-live="polite">
+            <h3 id="titulo-lectura">Tu próxima lectura</h3>
+            <p id="texto-lectura">Elige uno de los libros para ver una recomendación.</p>
+            <a id="enlace-lectura" href="https://www.biblegateway.com/" target="_blank" rel="noopener noreferrer">Abrir Biblia en línea ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="recursos" aria-labelledby="recursos-titulo">
+      <div class="section-heading">
+        <h2 id="recursos-titulo">Recursos para continuar</h2>
+        <p>Enlaces externos para leer y estudiar la Biblia. Se abrirán en una pestaña nueva.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>BibleGateway</h3>
+          <p>Consulta pasajes y compara traducciones disponibles.</p>
+          <a href="https://www.biblegateway.com/" target="_blank" rel="noopener noreferrer">Visitar BibleGateway ↗</a>
+        </article>
+        <article class="card">
+          <h3>YouVersion</h3>
+          <p>Encuentra planes de lectura y distintas versiones bíblicas.</p>
+          <a href="https://www.bible.com/es" target="_blank" rel="noopener noreferrer">Visitar YouVersion ↗</a>
+        </article>
+        <article class="card">
+          <h3>Consejo de lectura</h3>
+          <p>Antes de interpretar un versículo, lee también los párrafos que lo rodean para comprender mejor el contexto.</p>
+          <a href="#inicio">Volver al inicio ↑</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>La Biblia · Un espacio para la Palabra</strong>
+        <p class="small">Diseño educativo para explorar y reflexionar.</p>
+      </div>
+      <p class="small">Hecho con HTML semántico, CSS adaptable y JavaScript.</p>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
